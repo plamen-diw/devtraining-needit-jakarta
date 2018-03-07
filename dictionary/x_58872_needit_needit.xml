@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element label="long descripion" max_length="40" name="long_descripion" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Short descrioption" max_length="40" name="short_descrioption" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="Choice 1" label="Request type" max_length="40" name="u_choice_3" type="string">
+            <choice>
+                <element label="hr" sequence="0" value="Choice 1"/>
+                <element label="facilities" sequence="1" value="Choice 2"/>
+                <element label="legal" sequence="2" value="Choice 3"/>
+                <element label="kor" sequence="3" value="Choice 4"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="Choice 8" label="What is needed" max_length="40" name="u_choice_4" type="string">
+            <choice>
+                <element label="hr 1" sequence="0" value="Choice 1"/>
+                <element label="hr 2" sequence="1" value="Choice 2"/>
+                <element label="facilities 1" sequence="2" value="Choice 3"/>
+                <element label="facilities 2" sequence="3" value="Choice 4"/>
+                <element label="legal 1" sequence="4" value="Choice 5"/>
+                <element label="legal 2" sequence="5" value="Choice 6"/>
+                <element label="kor 1" sequence="6" value="Choice 7"/>
+                <element label="kor 2" sequence="7" value="Choice 8"/>
+            </choice>
+        </element>
+        <element label="When" max_length="40" name="u_glide_date_time_1" type="glide_date_time"/>
+        <element label="Requested for" max_length="32" name="u_reference_2" reference="sys_user" type="reference" use_dependent_field="true"/>
+        <index name="index">
+            <element name="u_reference_2"/>
+        </index>
+    </element>
+</database>
